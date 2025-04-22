@@ -17,7 +17,7 @@
   .hero-section {
     width: 100%;
     min-height: 100vh;
-    background: url('/src/assets/heroimg2.jpg') center/cover no-repeat;
+    background: url('/src/assets/logo.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;

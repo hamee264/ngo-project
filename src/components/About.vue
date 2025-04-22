@@ -69,12 +69,13 @@
   }
   
   .about-card {
-    background: #f9f9f9;
+    background: #ffffff;
+    border-radius: 10px;
     padding: 24px;
-    border-radius: 12px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    color: #333;
   }
   
   .about-card:hover {

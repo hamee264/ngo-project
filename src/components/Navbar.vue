@@ -3,7 +3,7 @@
     <header class="navbar">
       <!-- Logo -->
       <div class="logoContainer">
-        <img src="/src/assets/ngo.png" alt="NGO Logo" class="logo" />
+        <img src="/src/assets/logo.jpg" alt="NGO Logo" class="logo" />
       </div>
 
       <!-- Hamburger Icon -->
@@ -88,6 +88,7 @@ export default {
 .logo {
   height: 48px;
   object-fit: contain;
+  border-radius: 50%;
 }
 
 /* Desktop Nav */
