@@ -37,11 +37,7 @@ export default {
           title: "Trustee",
           name: "Alhaji Luqman Adewunmi",
         },
-        {
-          image: "trustee2.jpg",
-          title: "Trustee",
-          name: "Alhaji Luqman Adewunmi",
-        },
+       
         {
           image: "trustee5.jpg",
           title: "Trustee",
