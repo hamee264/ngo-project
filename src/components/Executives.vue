@@ -28,24 +28,29 @@ export default {
           name: "Ogunjobi Ganiu Adio",
         },
         {
-          image: "sec.jpg",
+          image: "sec2.jpg",
           title: "Secretary",
           name: "Mrs Oladipupo Temitope",
         },
         {
           image: "trustee1.jpg",
           title: "Trustee",
-          name: "Alhaji Lakman Adewunmi",
+          name: "Alhaji Luqman Adewunmi",
         },
         {
           image: "trustee2.jpg",
           title: "Trustee",
-          name: "Alhaji Lakman Adewunmi",
+          name: "Alhaji Luqman Adewunmi",
         },
         {
-          image: "trustee3.jpg",
+          image: "trustee5.jpg",
           title: "Trustee",
           name: "Abdulhalmed Akinyemi Akinsoji",
+        },
+        {
+          image: "trustee6.jpg",
+          title: "Trustee",
+          name: "Prince Olusegun Stephen",
         },
       ],
     };

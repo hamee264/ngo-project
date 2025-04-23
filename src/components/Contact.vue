@@ -47,7 +47,7 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 2rem;
-  color: green;
+  color: #4f46e5;
 }
 
 .form-container {
@@ -99,7 +99,7 @@
 }
 
 .form-submit {
-  background-color: green;
+  background-color: #4f46e5;
   color: white;
   border: none;
   padding: 0.9rem 1.5rem;
@@ -112,8 +112,8 @@
 
 .form-submit:hover {
   background-color: white;
-  color: green;
-  border: 2px solid green;
+  color: #4f46e5;
+  border: 2px solid #4f46e5;
 }
 
 @keyframes fadeInUp {

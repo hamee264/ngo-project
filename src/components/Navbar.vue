@@ -117,13 +117,13 @@ export default {
   bottom: -4px;
   width: 0%;
   height: 2px;
-  background-color: #1e7c1e;
+  background-color: #4f46e5;
   transition: width 0.3s ease;
 }
 
 .navContainer a:hover,
 .sidebar-nav a:hover {
-  color: #1e7c1e;
+  color: #4f46e5;
 }
 
 .navContainer a:hover::after,

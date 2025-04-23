@@ -54,7 +54,7 @@
     font-weight: bold;
     margin-bottom: 1.5rem;
     text-align: center;
-    color: green;
+    color: #4f46e5;
   }
   
   .faq-item {
@@ -72,7 +72,7 @@
   }
   
   .faq-question:hover {
-    color: green;
+    color: #4f46e5;
   }
   
   .faq-icon {

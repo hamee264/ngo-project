@@ -50,7 +50,7 @@ export default {
 .get-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #1e7c1e;
+  color: #4f46e5;
   margin-bottom: 40px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -79,7 +79,7 @@ export default {
 
 .get-card h3 {
   font-size: 1.6rem;
-  color: #1e7c1e;
+  color: #4f46e5;
   margin-bottom: 12px;
   font-weight: 600;
 }

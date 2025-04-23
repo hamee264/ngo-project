@@ -7,6 +7,15 @@
       <img src="/src/assets/IMG-20250416-WA0100.jpg" alt="">
       <img src="/src/assets/IMG-20250416-WA0101.jpg" alt="">
       <img src="/src/assets/IMG-20250416-WA0102.jpg" alt="">
+      <img src="/src/assets/gal1.jpg" alt="">
+      <img src="/src/assets/gal2.jpg" alt="">
+      <img src="/src/assets/gal3.jpg" alt="">
+      <img src="/src/assets/gal5.jpg" alt="">
+      <img src="/src/assets/gal6.jpg" alt="">
+      <img src="/src/assets/gal4.jpg" alt="">
+      
+      
+      <img src="/src/assets/gal7.jpg" alt="">
     </div>
   </div>
 </template>

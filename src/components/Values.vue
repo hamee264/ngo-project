@@ -66,7 +66,7 @@
   .section-title {
     font-size: 2.2rem;
     font-weight: 700;
-    color: #1e7c1e;
+    color: #4f46e5;
     margin-bottom: 40px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -93,7 +93,7 @@
   .value-card h3 {
     font-size: 1.6rem;
     margin-bottom: 12px;
-    color: #1e7c1e;
+    color: #4f46e5;
     font-weight: 600;
   }
   
@@ -110,12 +110,12 @@
   }
   
   .value-card:focus-within {
-    outline: 2px solid #1e7c1e;
+    outline: 2px solid #4f46e5;
   }
   
   /* Accessibility: Focus styles for keyboard navigation */
   .value-card:focus {
-    outline: 2px solid #1e7c1e;
+    outline: 2px solid #4f46e5;
   }
   
   @media (max-width: 768px) {

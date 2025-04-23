@@ -130,7 +130,7 @@ export default {
 }
 
 .form-submit {
-  background-color: green;
+  background-color: #4f46e5;
   color: white;
   border: none;
   padding: 0.9rem 1.5rem;
@@ -144,8 +144,8 @@ export default {
 
 .form-submit:hover {
   background-color: white;
-  border: green solid 2px;
-  color: green;
+  border: #4f46e5 solid 2px;
+  color: #4f46e5;
 }
 
 @keyframes fadeInUp {

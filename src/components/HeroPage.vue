@@ -56,7 +56,7 @@
   /* Button */
   .hero-btn {
     padding: 0.85rem 2rem;
-    background-color: #1e7c1e;
+    background-color: #4f46e5;
     border: none;
     border-radius: 0.5rem;
     color: white;
@@ -67,7 +67,7 @@
   }
   
   .hero-btn:hover {
-    background-color: #155d15;
+    background-color: #4f46e5;
   }
   
   /* Extra Responsive Tweaks */
