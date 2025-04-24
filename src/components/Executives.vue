@@ -33,7 +33,7 @@ export default {
           name: "Mrs Oladipupo Temitope",
         },
         {
-          image: "trustee1.jpg",
+          image: "trustee9.jpg",
           title: "Trustee",
           name: "Alhaji Luqman Adewunmi",
         },
@@ -70,7 +70,7 @@ export default {
 .executives-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #333;
+  color: #4f46e5;
   margin-bottom: 0.5rem;
 }
 
@@ -101,7 +101,7 @@ export default {
 
 .executive-image {
   width: 100%;
-  height: 300px; /* Adjust as needed */
+  max-height: 400px; /* Adjust as needed */
   /* object-fit: cover; */
   object-position: top;
   border-radius: 12px;
