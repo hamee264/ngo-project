@@ -28,12 +28,12 @@ export default {
           name: "Ogunjobi Ganiu Adio",
         },
         {
-          image: "sec2.jpg",
+          image: "sec3.jpg",
           title: "Secretary",
           name: "Mrs Oladipupo Temitope",
         },
         {
-          image: "trustee9.jpg",
+          image: "trustee20.jpg",
           title: "Trustee",
           name: "Alhaji Luqman Adewunmi",
         },
@@ -101,11 +101,12 @@ export default {
 
 .executive-image {
   width: 100%;
-  max-height: 400px; /* Adjust as needed */
-  /* object-fit: cover; */
-  object-position: top;
+  /* height: 400px;  */
+  object-fit: cover;
+  /* object-position: top; */
   border-radius: 12px;
   margin-bottom: 1rem;
+  /* border-radius: 50%; */
 }
 
 

@@ -11,15 +11,16 @@
       <img src="/src/assets/gal2.jpg" alt="">
       <img src="/src/assets/gal3.jpg" alt="">
       <img src="/src/assets/gal5.jpg" alt="">
-      <img src="/src/assets/gal6.jpg" alt="">
-      <img src="/src/assets/gal11.jpg" alt="">
       <img src="/src/assets/gal4.jpg" alt="">
       <img src="/src/assets/gal9.jpg" alt="">
-      
-      
-      
-      
+      <img src="/src/assets/gal6.jpg" alt="">
+      <img src="/src/assets/gal11.jpg" alt="">
+      <img src="/src/assets/class1.jpg" alt="">
+      <img src="/src/assets/class2.jpg" alt="">
+      <img src="/src/assets/class3.jpg" alt="">
+      <img src="/src/assets/class4.jpg" alt="">
     </div>
+    <video controls src="/src/assets/vid.mp4"></video>
   </div>
 </template>
 
@@ -51,7 +52,7 @@ export default {
 
 .imgCon img {
   width: 100%;
-  height: auto;
+  height: 300px;
   border-radius: 10px;
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -61,5 +62,10 @@ export default {
 .imgCon img:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+video{
+  margin-top: 50px;
+  max-width: 800px;
+  width:100%;
 }
 </style>
