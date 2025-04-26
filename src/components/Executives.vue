@@ -41,12 +41,12 @@ export default {
         {
           image: "trustee5.jpg",
           title: "Trustee",
-          name: "Abdulhalmed Akinyemi Akinsoji",
+          name: "Abdulhammed Akinyemi Akinsoji",
         },
         {
           image: "trustee6.jpg",
           title: "Trustee",
-          name: "Prince Olusegun Stephen",
+          name: "Prince Adesegun Stephen",
         },
       ],
     };
