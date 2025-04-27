@@ -41,7 +41,7 @@ export default {
         {
           image: "trustee5.jpg",
           title: "Trustee",
-          name: "Comerade Abdulhammed Akinyemi Akinsoji",
+          name: "Comrade Abdulhammed Akinyemi Akinsoji",
         },
         {
           image: "trustee6.jpg",
