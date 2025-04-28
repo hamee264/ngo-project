@@ -15,12 +15,12 @@
 
       <!-- Desktop Navigation -->
       <nav class="navContainer desktop-nav">
-        <a href="#">Home</a>
-        <a href="#">About Us</a>
-        <a href="#">What We Do</a>
-        <a href="#">Get Involved</a>
-        <a href="#">Resources</a>
-        <a href="#">Support</a>
+        <a class="link" href="#heropage" @click.prevent="scrollTo('heropage')">Home</a>
+    <a class="link" href="#about" @click.prevent="scrollTo('about')">About</a>
+    <a class="link" href="#things" @click.prevent="scrollTo('things')">What We Do</a>
+    <a class="link" href="#get" @click.prevent="scrollTo('get')">Get Involved</a>
+    <a class="link" href="#resources" @click.prevent="scrollTo('resources')">Resources</a>
+    <a class="link" href="#Donate" @click.prevent="scrollTo('Donate')">Support</a>
       </nav>
     </header>
 
@@ -30,12 +30,12 @@
     <!-- Mobile Sidebar -->
     <aside class="mobile-sidebar" :class="{ show: isOpen }">
       <nav class="sidebar-nav">
-        <a href="#" @click="toggleMenu">Home</a>
-        <a href="#" @click="toggleMenu">About Us</a>
-        <a href="#" @click="toggleMenu">What We Do</a>
-        <a href="#" @click="toggleMenu">Get Involved</a>
-        <a href="#" @click="toggleMenu">Resources</a>
-        <a href="#" @click="toggleMenu">Support</a>
+        <a class="link" href="#heropage"  @click="toggleMenu" @click.prevent="scrollTo('heropage')">Home</a>
+    <a class="link" href="#about"  @click="toggleMenu" @click.prevent="scrollTo('about')">About</a>
+    <a class="link" href="#things"  @click="toggleMenu" @click.prevent="scrollTo('things')">What We Do</a>
+    <a class="link" href="#get"  @click="toggleMenu" @click.prevent="scrollTo('get')">Get Involved</a>
+    <a class="link" href="#resources"  @click="toggleMenu" @click.prevent="scrollTo('resources')">Resources</a>
+    <a class="link" href="#Donate"  @click="toggleMenu" @click.prevent="scrollTo('Donate')">Support</a>
       </nav>
     </aside>
 
@@ -54,17 +54,26 @@ export default {
     toggleMenu() {
       this.isOpen = !this.isOpen;
     },
+    scrollTo(id) {
+      const el = document.getElementById(id)
+      if (el) {
+        const top = el.getBoundingClientRect().top + window.pageYOffset - 80; // Adjust for navbar height
+        window.scrollTo({ top, behavior: 'smooth' })
+      }
+    }
   },
+  
 };
 </script>
 
 <style scoped>
-/* Global Container */
+
 .container {
   width: 100%;
   font-family: 'Segoe UI', sans-serif;
-  padding-top: 80px; /* To account for fixed navbar */
+  padding-top: 80px; 
   overflow-x: hidden;
+  /* padding-right: 30px !important; */
 }
 
 /* Navbar */
@@ -73,7 +82,7 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 24px;
+  padding: 20px 4px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -94,23 +103,24 @@ export default {
 /* Desktop Nav */
 .navContainer {
   display: flex;
-  gap: 28px;
+  gap: 20px;
+  padding-right: 15px !important;
 }
 
-.navContainer a,
-.sidebar-nav a {
+.navContainer .link,
+.sidebar-nav .link {
   position: relative;
   text-decoration: none;
   color: #000;
   font-weight: 600;
   font-size: 16px;
-  padding: 5px 0;
+  padding: 5px 10px;
   transition: color 0.3s ease;
   z-index: 100;
 }
 
-.navContainer a::after,
-.sidebar-nav a::after {
+.navContainer .link::after,
+.sidebar-nav .link::after {
   content: '';
   position: absolute;
   left: 0;
@@ -121,13 +131,13 @@ export default {
   transition: width 0.3s ease;
 }
 
-.navContainer a:hover,
-.sidebar-nav a:hover {
+.navContainer .link:hover,
+.sidebar-nav .link:hover {
   color: #4f46e5;
 }
 
-.navContainer a:hover::after,
-.sidebar-nav a:hover::after {
+.navContainer .link:hover::after,
+.sidebar-nav .link:hover::after {
   width: 100%;
 }
 
@@ -175,7 +185,7 @@ export default {
 .mobile-sidebar {
   position: fixed;
   top: 0;
-  left: -270px;
+  left: -400px;
   width: 260px;
   height: 100vh;
   background-color: #ffffff;
@@ -199,7 +209,7 @@ export default {
   gap: 22px;
 }
 
-.sidebar-nav a {
+.sidebar-nav router-link {
   color: #222;
 }
 
@@ -253,5 +263,12 @@ export default {
   .hero-content p {
     font-size: 16px;
   }
+  /* Desktop Nav */
+/* .navContainer {
+  display: flex;
+  gap: 20px;
+  display: none;
+  padding-right: 0px !important;
+} */
 }
 </style>

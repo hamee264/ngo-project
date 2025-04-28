@@ -1,14 +1,14 @@
 <template>
   <div class="container">
-    <HeroPage/>
-    <Values/>
-    <About/>
-    <Things/>
-    <Get/>
-    <Resources/>
+    <HeroPage id="heropage"/>
+    <Values id="values"/>
+    <About id="about"/>
+    <Things id="things"/>
+    <Get id="get"/>
+    <Resources id="resources"/>
     <Contact/>
     <Faq/>
-    <Donate/>
+    <Donate id="Donate"/>
     <Stories/>
     <Gallery/>
     <Copyright/>
