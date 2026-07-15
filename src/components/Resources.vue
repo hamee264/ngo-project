@@ -1,123 +1,292 @@
 <template>
-  <div class="supports-container">
-    <h1 class="supports-title">Resources</h1>
-    <div class="supports-grid">
-      <div class="supports-card" v-for="item in supports" :key="item.id">
-        <h3>{{ item.heading }}</h3>
-        <p>{{ item.body }}</p>
+  <section id="resources" class="resources-section">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <span class="section-tag">
+          RESOURCES
+        </span>
+
+        <h2>
+          Explore Our Resources
+        </h2>
+
+        <p>
+          Stay informed with our latest news, reports and answers to common
+          questions about our work and community impact.
+        </p>
+
       </div>
+
+      <div class="resources-grid">
+
+        <article class="resource-card" v-for="item in supports" :key="item.id">
+
+          <img :src="item.image" :alt="item.heading" class="resource-image">
+
+          <div class="resource-content">
+
+            <h3>{{ item.heading }}</h3>
+
+            <p>{{ item.body }}</p>
+
+            <!-- <button class="resource-btn">
+              {{ item.button }}
+            </button> -->
+
+          </div>
+
+        </article>
+
+      </div>
+
     </div>
-  </div>
+
+  </section>
 </template>
 
-<script>
-export default {
-  
-  data() {
-    return {
-      supports: [
+<script setup>
+
+import blog from "/src/assets/gal1.jpg"
+import report from "/src/assets/IMG-20251015-WA0153.jpg"
+import faq from "/src/assets/IMG-20251015-WA0161.jpg"
+
+const supports = [
+
   {
     id: 1,
-    heading: "Blog",
-    body:
-      "Discover inspiring stories, expert insights, and community highlights. Stay connected with our latest updates and impact-driven work.",
+    image: blog,
+    heading: "Our Blog",
+    body: "Read inspiring stories, community updates, project highlights and the latest news from our foundation.",
+    button: "Read Articles"
   },
+
   {
     id: 2,
-    heading: "Report",
-    body:
-      "Explore our annual reports and project outcomes. See how transparency and accountability shape our mission and achievements.",
+    image: report,
+    heading: "Annual Reports",
+    body: "Access our annual reports, financial summaries and project impact reports that demonstrate transparency and accountability.",
+    button: "View Reports"
   },
+
   {
     id: 3,
-    heading: "FAQS",
-    body:
-      "Got questions? Find answers about our mission, operations, and how you can get involved in making a difference.",
-  },
+    image: faq,
+    heading: "Frequently Asked Questions",
+    body: "Find answers to common questions about donations, volunteering, partnerships and our programmes.",
+    button: "Read FAQs"
+  }
+
 ]
 
-    };
-  },
-};
 </script>
 
 <style scoped>
-.supports-container {
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
+.resources-section {
 
-.supports-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #4f46e5;
-  margin-bottom: 40px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
+  padding: 120px 0;
 
-.supports-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
-}
-
-.supports-card {
   background: #ffffff;
-  border-radius: 10px;
-  padding: 24px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: left;
-  color: #333;
+
 }
 
-.supports-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+.container {
+
+  width: min(92%, 1200px);
+
+  margin: auto;
+
 }
 
-.supports-card h3 {
-  font-size: 1.6rem;
-  color: #4f46e5;
-  margin-bottom: 12px;
-  font-weight: 600;
+.section-header {
+
+  text-align: center;
+
+  max-width: 700px;
+
+  margin: 0 auto 70px;
+
 }
 
-.supports-card p {
+.section-tag {
+
+  display: inline-block;
+
+  padding: 8px 18px;
+
+  background: #edf7f0;
+
+  color: #166534;
+
+  border-radius: 999px;
+
+  font-size: .85rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 18px;
+
+}
+
+.section-header h2 {
+
+  font-size: clamp(2rem, 4vw, 3rem);
+
+  color: #111827;
+
+  margin-bottom: 18px;
+
+}
+
+.section-header p {
+
   font-size: 1.05rem;
-  color: #333;
-  line-height: 1.7;
+
+  line-height: 1.8;
+
+  color: #6b7280;
+
 }
 
-/* Responsive Typography */
-@media (max-width: 768px) {
-  .supports-title {
-    font-size: 2rem;
-  }
+.resources-grid {
 
-  .supports-card h3 {
-    font-size: 1.4rem;
-  }
+  display: grid;
 
-  .supports-card p {
-    font-size: 1rem;
-  }
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 30px;
+
 }
 
-@media (max-width: 480px) {
-  .supports-title {
-    font-size: 1.8rem;
+.resource-card {
+
+  background: #fff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  transition: .35s;
+
+  display: flex;
+
+  flex-direction: column;
+
+}
+
+.resource-card:hover {
+
+  transform: translateY(-6px);
+
+  border-color: #166534;
+
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .06);
+
+}
+
+.resource-image {
+
+  width: 100%;
+
+  height: 220px;
+
+  object-fit: cover;
+
+  transition: .4s;
+
+}
+
+.resource-card:hover .resource-image {
+
+  transform: scale(1.05);
+
+}
+
+.resource-content {
+
+  padding: 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  flex: 1;
+
+}
+
+.resource-content h3 {
+
+  font-size: 1.4rem;
+
+  margin-bottom: 16px;
+
+  color: #111827;
+
+}
+
+.resource-content p {
+
+  line-height: 1.8;
+
+  color: #6b7280;
+
+  margin-bottom: 24px;
+
+}
+
+.resource-btn {
+
+  margin-top: auto;
+
+  padding: 14px 22px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #166534;
+
+  color: #fff;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: .3s;
+
+}
+
+.resource-btn:hover {
+
+  background: #14532d;
+
+}
+
+@media(max-width:768px) {
+
+  .resources-grid {
+
+    grid-template-columns: 1fr;
+
   }
 
-  .supports-card h3 {
-    font-size: 1.2rem;
+  .resource-content {
+
+    padding: 24px;
+
   }
 
-  .supports-card p {
-    font-size: 0.95rem;
+  .resource-image {
+
+    height: 200px;
+
   }
+
 }
 </style>

@@ -1,127 +1,328 @@
 <template>
-  <div class="executives-container">
-    <h2 class="executives-title">Executives</h2>
-    <p class="executives-subtitle">Members</p>
+  <section id="executives" class="executives-section">
 
-    <div class="executives-grid">
-      <div v-for="(story, index) in stories" :key="index" class="executive-card">
-        <img
-          :src="getImage(story.image)"
-          :alt="story.title || 'Executive member'"
-          class="executive-image"
-        />
-        <h3 class="executive-title">{{ story.title }}</h3>
-        <p class="executive-name">{{ story.name }}</p>
+    <div class="container">
+
+      <div class="section-header">
+
+        <span class="section-tag">
+          OUR LEADERSHIP
+        </span>
+
+        <h2>Meet Our Executives</h2>
+
+        <p>
+          Dedicated leaders committed to serving the community with
+          integrity, vision and excellence.
+        </p>
+
       </div>
+
+      <div class="executives-grid">
+
+        <article class="executive-card" v-for="(member, index) in executives" :key="index">
+
+          <div class="image-wrapper">
+
+            <img :src="getImage(member.image)" :alt="member.name" class="executive-image">
+
+          </div>
+
+          <div class="card-content">
+
+            <span class="role">
+
+              <i class="fas fa-user-tie"></i>
+
+              {{ member.title }}
+
+            </span>
+
+            <h3>{{ member.name }}</h3>
+
+          </div>
+
+        </article>
+
+      </div>
+
     </div>
-  </div>
+
+  </section>
 </template>
+<script setup>
 
-<script>
-export default {
-  data() {
-    return {
-      stories: [
-        {
-          image: "chairman.jpg",
-          title: "Chairman",
-          name: "Ogunjobi Ganiu Adio",
-        },
-        {
-          image: "sec3.jpg",
-          title: "Secretary",
-          name: "Mrs Oladipupo Temitope",
-        },
-        {
-          image: "trustee20.jpg",
-          title: "Trustee",
-          name: "Alhaji Luqman Adewunmi",
-        },
-       
-        {
-          image: "trustee5.jpg",
-          title: "Trustee",
-          name: "Comrade Abdulhammed Akinyemi Akinsoji",
-        },
-        {
-          image: "trustee6.jpg",
-          title: "Trustee",
-          name: "Prince Adesegun Stephen",
-        },
-      ],
-    };
+const executives = [
+
+  {
+    image: "chairman.jpg",
+    title: "Chairman",
+    name: "Ogunjobi Ganiu Adio"
   },
-  methods: {
-    getImage(image) {
-      return new URL(`../assets/${image}`, import.meta.url).href;
-    },
+
+  {
+    image: "sec3.jpg",
+    title: "Secretary",
+    name: "Mrs Oladipupo Temitope"
   },
-};
+
+  {
+    image: "trustee20.jpg",
+    title: "Trustee",
+    name: "Alhaji Luqman Adewunmi"
+  },
+
+  {
+    image: "trustee5.jpg",
+    title: "Trustee",
+    name: "Comrade Abdulhammed Akinyemi Akinsoji"
+  },
+
+  {
+    image: "trustee6.jpg",
+    title: "Trustee",
+    name: "Prince Adesegun Stephen"
+  }
+
+]
+
+const getImage = (image) => {
+
+  return new URL(`../assets/${image}`, import.meta.url).href
+
+}
+
 </script>
-
 <style scoped>
-.executives-container {
-  padding: 3rem 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
+.executives-section {
+
+  padding: 120px 0;
+
+  background: #ffffff;
+
+}
+
+.container {
+
+  width: min(92%, 1200px);
+
+  margin: auto;
+
+}
+
+.section-header {
+
   text-align: center;
+
+  max-width: 700px;
+
+  margin: 0 auto 70px;
+
 }
 
-.executives-title {
-  font-size: 2.5rem;
+.section-tag {
+
+  display: inline-block;
+
+  padding: 8px 18px;
+
+  background: #edf7f0;
+
+  color: #166534;
+
+  border-radius: 999px;
+
+  font-size: .85rem;
+
   font-weight: 700;
-  color: #4f46e5;
-  margin-bottom: 0.5rem;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 18px;
+
 }
 
-.executives-subtitle {
-  font-size: 1.1rem;
-  color: #666;
-  margin-bottom: 2rem;
+.section-header h2 {
+
+  font-size: clamp(2rem, 4vw, 3rem);
+
+  margin-bottom: 18px;
+
+  color: #111827;
+
+}
+
+.section-header p {
+
+  color: #6b7280;
+
+  line-height: 1.8;
+
 }
 
 .executives-grid {
+
   display: grid;
-  gap: 2rem;
+
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 32px;
+
 }
 
 .executive-card {
+
   background: #fff;
-  padding: 1.5rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-  text-align: left;
-  transition: transform 0.3s ease;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  transition: .35s;
+
 }
 
 .executive-card:hover {
-  transform: translateY(-5px);
+
+  transform: translateY(-8px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, .08);
+
+}
+
+.image-wrapper {
+
+  overflow: hidden;
+
 }
 
 .executive-image {
+
   width: 100%;
-  /* height: 400px;  */
+
+  height: 340px;
+
   object-fit: cover;
-  /* object-position: top; */
-  border-radius: 12px;
-  margin-bottom: 1rem;
-  /* border-radius: 50%; */
+
+  transition: .45s;
+
+  display: block;
+
 }
 
+.executive-card:hover .executive-image {
 
+  transform: scale(1.05);
 
-.executive-title {
-  font-size: 1.3rem;
+}
+
+.card-content {
+
+  padding: 28px;
+
+  text-align: center;
+
+}
+
+.role {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 8px 16px;
+
+  background: #edf7f0;
+
+  color: #166534;
+
+  border-radius: 999px;
+
+  font-size: .85rem;
+
   font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #4f46e5;
-  text-transform: capitalize;
+
+  margin-bottom: 18px;
+
 }
 
-.executive-name {
-  font-size: 1rem;
-  color: #444;
+.role i {
+
+  font-size: .9rem;
+
 }
 
+.card-content h3 {
+
+  font-size: 1.35rem;
+
+  color: #111827;
+
+  font-weight: 700;
+
+  line-height: 1.5;
+
+}
+
+@media(max-width:900px) {
+
+  .executives-section {
+
+    padding: 90px 0;
+
+  }
+
+  .executives-grid {
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+
+  }
+
+  .executive-image {
+
+    height: 300px;
+
+  }
+
+}
+
+@media(max-width:600px) {
+
+  .container {
+
+    width: 94%;
+
+  }
+
+  .executives-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .card-content {
+
+    padding: 22px;
+
+  }
+
+  .executive-image {
+
+    height: 340px;
+
+  }
+
+  .section-header {
+
+    margin-bottom: 45px;
+
+  }
+
+}
 </style>

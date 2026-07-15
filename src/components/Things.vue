@@ -1,121 +1,225 @@
 <template>
-  <div class="things-container">
-    <h1 class="thing-title">What We Do</h1>
-    <div class="thing-grid">
-      <div class="thing-card" v-for="thing in things" :key="thing.id">
-        <h3>{{ thing.heading }}</h3>
-        <p>{{ thing.body }}</p>
+  <section id="things" class="programs-section">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <span class="section-tag">
+          WHAT WE DO
+        </span>
+
+        <h2>
+          Our Programmes
+        </h2>
+
+        <p>
+          We are committed to improving lives through practical initiatives
+          that create opportunities, restore hope and strengthen communities.
+        </p>
+
       </div>
+
+      <div class="program-grid">
+
+        <article class="program-card" v-for="program in things" :key="program.id">
+
+          <img :src="program.image" :alt="program.heading" class="program-image">
+
+          <div class="program-content">
+
+            <h3>{{ program.heading }}</h3>
+
+            <p>{{ program.body }}</p>
+
+          </div>
+
+        </article>
+
+      </div>
+
     </div>
-  </div>
+
+  </section>
 </template>
 
-<script>
-export default {
-  
-  data() {
-    return {
-      things: [
-        {
-          id: 1,
-          heading: "Programs & Services",
-          body:
-            "We run various programs including educational sponsorships, healthcare access initiatives, youth empowerment projects, and vocational training to uplift underserved communities.",
-        },
-        {
-          id: 2,
-          heading: "Impact & Outcomes",
-          body:
-            "Over the years, we've impacted over 10,000 lives through scholarship programs, built 5 healthcare centers, and partnered with local leaders to enhance economic development and self-sufficiency.",
-        },
-        {
-          id: 3,
-          heading: "Areas of Focus",
-          body:
-            "Our key focus areas include education, health and wellness, women and youth empowerment, rural development, and advocacy for social justice and equal opportunities.",
-        },
-      ],
-    };
+<script setup>
+import education from '/src/assets/class3.jpg'
+import healthcare from '/src/assets/IMG-20251015-WA0161.jpg'
+import relief from '/src/assets/IMG-20251015-WA0155.jpg'
+import youth from '/src/assets/IMG-20251015-WA0162.jpg'
+import community from '/src/assets/IMG-20251015-WA0153.jpg'
+import family from '/src/assets/IMG-20251015-WA0142.jpg'
+
+const things = [
+  {
+    id: 1,
+    image: education,
+    heading: "Education Support",
+    body: "Providing school fees, uniforms, exercise books, school bags, learning materials and scholarships to children from disadvantaged backgrounds."
   },
-};
+  {
+    id: 2,
+    image: healthcare,
+    heading: "Healthcare Assistance",
+    body: "Supporting medical outreaches, providing healthcare assistance and helping vulnerable families gain access to essential medical services."
+  },
+  {
+    id: 3,
+    image: relief,
+    heading: "Relief & Welfare",
+    body: "Distributing food items, relief materials and emergency assistance to vulnerable individuals and families during difficult times."
+  },
+  {
+    id: 4,
+    image: youth,
+    heading: "Youth Empowerment",
+    body: "Equipping young people with vocational skills, mentorship and entrepreneurship opportunities for sustainable livelihoods."
+  },
+  {
+    id: 5,
+    image: community,
+    heading: "Community Development",
+    body: "Working closely with local communities on projects that promote education, sanitation, social inclusion and sustainable development."
+  },
+  {
+    id: 6,
+    image: family,
+    heading: "Family Support",
+    body: "Providing assistance to widows, elderly people and low-income families through various welfare initiatives and community outreach."
+  }
+]
+
 </script>
 
 <style scoped>
-.things-container {
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+.programs-section {
+
+  padding: 120px 0;
+
+  background: #f8faf9;
+
+}
+
+.container {
+
+  width: min(92%, 1200px);
+
+  margin: auto;
+
+}
+
+.section-header {
+
   text-align: center;
+
+  max-width: 700px;
+
+  margin: 0 auto 70px;
+
 }
 
-.thing-title {
-  font-size: 2.5rem;
-  color: #4f46e5;
-  margin-bottom: 40px;
-  font-weight: bold;
-  text-transform: uppercase;
+.section-tag {
+
+  display: inline-block;
+
+  padding: 8px 18px;
+
+  background: #edf7f0;
+
+  color: #166534;
+
+  border-radius: 999px;
+
+  font-size: .85rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 18px;
+
 }
 
-.thing-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
+.section-header h2 {
+
+  font-size: clamp(2rem, 4vw, 3rem);
+
+  color: #111827;
+
+  margin-bottom: 18px;
+
 }
 
-.thing-card {
-  background: #ffffff;
-  border-radius: 10px;
-  padding: 24px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: left;
-  color: #333;
-}
+.section-header p {
 
-.thing-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
+  color: #6b7280;
 
-.thing-card h3 {
-  font-size: 1.6rem;
-  color: #4f46e5;
-  margin-bottom: 12px;
-  font-weight: 600;
-}
+  line-height: 1.8;
 
-.thing-card p {
   font-size: 1.05rem;
-  color: #333;
-  line-height: 1.7;
+
 }
 
-/* Responsive Typography */
-@media (max-width: 768px) {
-  .thing-title {
-    font-size: 2rem;
-  }
+.program-grid {
 
-  .thing-card h3 {
-    font-size: 1.4rem;
-  }
+  display: grid;
 
-  .thing-card p {
-    font-size: 1rem;
-  }
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 28px;
+
 }
 
-@media (max-width: 480px) {
-  .thing-title {
-    font-size: 1.8rem;
+.program-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: .3s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, .08);
+  border-color: #166534;
+}
+
+.program-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.program-content {
+  padding: 28px;
+}
+
+.program-content h3 {
+  font-size: 1.35rem;
+  color: #111827;
+  margin-bottom: 14px;
+}
+
+.program-content p {
+  color: #6b7280;
+  line-height: 1.8;
+}
+
+
+@media(max-width:768px) {
+
+  .program-grid {
+
+    grid-template-columns: 1fr;
+
   }
 
-  .thing-card h3 {
-    font-size: 1.2rem;
+  .program-card {
+
+    padding: 28px;
+
   }
 
-  .thing-card p {
-    font-size: 0.95rem;
-  }
 }
 </style>
